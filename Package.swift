@@ -3,10 +3,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "Recaptcha",
+    name: "RecaptchaShim",
     platforms: [.macOS(.v10_15), .iOS(.v14)],
     products: [
-        .library(name: "Recaptcha", targets: ["Recaptcha"])
+        .library(name: "RecaptchaShim", type: .dynamic, targets: ["RecaptchaShim"])
     ],
     dependencies: [
         .package(
@@ -24,7 +24,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Recaptcha",
+            name: "RecaptchaShim",
             dependencies: [
                 .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher"),
                 .product(name: "Promises", package: "promises"),
