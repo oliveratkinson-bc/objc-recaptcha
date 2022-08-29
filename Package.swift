@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Recaptcha",
-    platforms: [.macOS(.v10_15)],
+    platforms: [.macOS(.v10_15), .iOS(.v14)],
     products: [
         .library(name: "Recaptcha", targets: ["Recaptcha"])
     ],
