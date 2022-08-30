@@ -6,7 +6,7 @@ let package = Package(
     name: "RecaptchaShim",
     platforms: [.macOS(.v10_15), .iOS(.v14)],
     products: [
-        .library(name: "RecaptchaShim", type: .dynamic, targets: ["RecaptchaShim"])
+        .library(name: "recaptcha", type: .dynamic, targets: ["recaptcha"])
     ],
     dependencies: [
         .package(
@@ -24,7 +24,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "RecaptchaShim",
+            name: "recaptcha",
             dependencies: [
                 .product(name: "GTMSessionFetcher", package: "gtm-session-fetcher"),
                 .product(name: "Promises", package: "promises"),
